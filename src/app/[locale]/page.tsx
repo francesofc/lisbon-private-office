@@ -22,37 +22,33 @@ export default async function HomePage({
           alt="Luxury interior with warm ambient lighting"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black-deep/72" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black-deep/85 via-black-deep/50 to-black-deep/60" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,_rgba(198,168,107,0.05)_0%,_transparent_60%)]" />
-        <div className="absolute top-0 left-[calc(50%-0.5px)] w-px h-28 bg-gradient-to-b from-transparent via-gold/15 to-transparent mt-[96px] hidden lg:block" />
+        <div className="absolute inset-0 bg-black-deep/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black-deep/90 via-black-deep/55 to-black-deep/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black-deep/40 via-transparent to-black-deep/20" />
+        <div className="absolute top-0 left-[calc(50%-0.5px)] w-px h-28 bg-gradient-to-b from-transparent via-gold/12 to-transparent mt-[96px] hidden lg:block" />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 w-full pt-40 pb-24 lg:pt-48 lg:pb-36">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-20 w-full pt-48 pb-28 lg:pt-56 lg:pb-40">
           <div className="max-w-2xl">
-            <p className="text-[11px] tracking-[0.35em] uppercase text-gold/50 mb-8">
+            <p className="text-[10px] tracking-[0.4em] uppercase text-gold/45 mb-10 lg:mb-12">
               {dict.hero.locations}
             </p>
-            <h1 className="font-serif text-[40px] md:text-[52px] lg:text-[64px] text-white/70 leading-[1.1] font-light mb-6 lg:mb-8">
+            <h1 className="font-serif text-[36px] md:text-[48px] lg:text-[60px] text-white leading-[1.12] font-light mb-8 lg:mb-10">
               {dict.hero.title1}<br />{dict.hero.title2}
             </h1>
-            <p className="text-[16px] md:text-[19px] lg:text-[21px] leading-[1.5] text-white/90 tracking-[0.01em] max-w-xl mb-4 lg:mb-5">
+            <p className="text-[15px] md:text-[17px] lg:text-[18px] leading-[1.7] text-white/60 tracking-[0.01em] max-w-lg mb-8 lg:mb-10">
               {dict.hero.subtitle}
             </p>
-            <p className="text-[17px] md:text-[20px] lg:text-[22px] leading-[1.5] text-gold/80 font-serif italic max-w-xl mb-10 lg:mb-12">
+            <p className="text-[13px] md:text-[14px] leading-[1.6] text-[#C6A66B]/70 font-serif italic max-w-lg mb-12 lg:mb-14">
               {dict.hero.tagline}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-16 lg:mb-20">
-              <Link href={`/${locale}/contact`} className="px-12 py-4.5 bg-gold text-black-deep text-[12px] tracking-[0.16em] uppercase font-semibold hover:bg-white hover:text-black-deep transition-all duration-500 text-center shadow-[0_0_30px_rgba(198,168,107,0.15)]">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href={`/${locale}/contact`} className="px-12 py-4 bg-[#C6A66B] text-[#0E0E0E] text-[11px] tracking-[0.2em] uppercase font-semibold hover:bg-white transition-all duration-500 text-center">
                 {dict.hero.cta1}
               </Link>
-              <Link href={`/${locale}/services`} className="px-10 py-4 border border-white/15 text-white/40 text-[12px] tracking-[0.14em] uppercase hover:border-gold/40 hover:text-gold/70 transition-all duration-500 text-center">
+              <Link href={`/${locale}/services`} className="px-10 py-4 border border-white/12 text-white/35 text-[11px] tracking-[0.18em] uppercase hover:border-white/25 hover:text-white/55 transition-all duration-500 text-center">
                 {dict.hero.cta2}
               </Link>
             </div>
-            <div className="w-8 h-px bg-white/8 mb-6" />
-            <p className="text-[12px] leading-[1.9] text-white/20 max-w-md">
-              {dict.hero.text1}
-            </p>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-offwhite to-transparent" />

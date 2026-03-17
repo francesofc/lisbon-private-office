@@ -18,9 +18,9 @@ const fr = {
   },
   hero: {
     locations: "Lisbonne · Cascais · Algarve",
-    title1: "Lisbon",
-    title2: "Private Office",
-    subtitle: "Conciergerie Privée pour Clients Internationaux au Portugal",
+    title1: "Votre Vie au Portugal,",
+    title2: "Entièrement Gérée",
+    subtitle: "Conciergerie privée et relocation pour clients internationaux en quête de clarté, discrétion et contrôle.",
     text1: "Lisbon Private Office est un service de conciergerie et de relocation discret, dédié aux propriétaires internationaux, entrepreneurs et familles qui s'installent au Portugal.",
     tagline: "Un interlocuteur unique et de confiance pour gérer votre vie au Portugal.",
     cta1: "Demander une Introduction",

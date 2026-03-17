@@ -18,9 +18,9 @@ const en = {
   },
   hero: {
     locations: "Lisbon · Cascais · Algarve",
-    title1: "Lisbon",
-    title2: "Private Office",
-    subtitle: "Private Concierge for International Clients in Portugal",
+    title1: "Your Life in Portugal,",
+    title2: "Fully Managed",
+    subtitle: "Private concierge and relocation for international clients seeking clarity, discretion and control.",
     text1: "Lisbon Private Office is a discreet concierge and relocation service dedicated to international property owners, entrepreneurs and families establishing themselves in Portugal.",
     tagline: "A single trusted contact to manage your life in Portugal.",
     cta1: "Request Introduction",
