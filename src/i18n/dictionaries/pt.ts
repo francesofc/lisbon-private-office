@@ -114,6 +114,7 @@ const pt = {
     types: ["Jantares selecionados", "Noites de networking", "Experiências culturais", "Encontros em locais únicos"],
   },
   cta: {
+    exclusive: "Para um número limitado de clientes por ano",
     title: "Uma Forma Mais Simples de Viver em Portugal",
     titleLine1: "Uma Forma Mais Simples",
     titleLine2: "de Viver em Portugal",

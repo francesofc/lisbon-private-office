@@ -15,7 +15,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div
-      className={`group relative p-10 lg:p-12 transition-all duration-500 ${
+      className={`group relative p-12 lg:p-14 transition-all duration-300 ease-out ${
         highlighted
           ? "bg-black-deep text-beige lg:scale-[1.02] lg:-my-4 lg:z-10 lg:shadow-2xl"
           : "bg-white hover:bg-white"
@@ -58,12 +58,12 @@ export default function ServiceCard({
         }`}
       />
 
-      <ul className="space-y-4">
+      <ul className="space-y-5">
         {features.map((feature, i) => (
           <li
             key={i}
-            className={`text-[13px] leading-[1.7] flex items-start gap-4 ${
-              highlighted ? "text-beige/45" : "text-warm-gray"
+            className={`text-[13px] leading-[1.85] flex items-start gap-4 ${
+              highlighted ? "text-beige/45" : "text-warm-gray/85"
             }`}
           >
             <span

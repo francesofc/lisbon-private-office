@@ -166,6 +166,7 @@ const en = {
     types: ["Curated dinners", "Networking evenings", "Cultural experiences", "Private gatherings in unique locations"],
   },
   cta: {
+    exclusive: "For a limited number of clients each year",
     title: "A Simpler Way to Live in Portugal",
     titleLine1: "A Simpler Way to",
     titleLine2: "Live in Portugal",

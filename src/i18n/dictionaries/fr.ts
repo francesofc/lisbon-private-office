@@ -114,6 +114,7 @@ const fr = {
     types: ["Dîners sélectionnés", "Soirées networking", "Expériences culturelles", "Rencontres dans des lieux d'exception"],
   },
   cta: {
+    exclusive: "Pour un nombre limité de clients chaque année",
     title: "Une Manière Plus Simple de Vivre au Portugal",
     titleLine1: "Une Manière Plus Simple",
     titleLine2: "de Vivre au Portugal",
