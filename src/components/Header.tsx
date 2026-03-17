@@ -44,12 +44,12 @@ export default function Header({ locale, dict }: HeaderProps) {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16 flex items-center justify-between h-[80px] lg:h-[88px]">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 flex items-center justify-between h-[72px] md:h-[80px] lg:h-[92px]">
         {/* Logo */}
         <Link href={`/${locale}`}>
           <span
-            className={`font-serif text-[17px] tracking-[0.22em] uppercase transition-colors duration-500 ${
-              scrolled ? "text-black-deep" : "text-beige"
+            className={`font-serif text-[11px] md:text-[18px] lg:text-[19px] tracking-[0.15em] md:tracking-[0.22em] uppercase transition-colors duration-500 whitespace-nowrap ${
+              scrolled ? "text-[#0E0E0E]" : "text-white"
             }`}
           >
             Lisbon Private Office
@@ -63,8 +63,8 @@ export default function Header({ locale, dict }: HeaderProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[13px] tracking-[0.08em] transition-colors duration-300 hover:text-gold ${
-                  scrolled ? "text-black-deep/50" : "text-beige/60"
+                className={`text-[12px] tracking-[0.08em] transition-colors duration-300 hover:text-gold ${
+                  scrolled ? "text-black-deep/40" : "text-white/50"
                 }`}
               >
                 {link.label}
@@ -84,8 +84,8 @@ export default function Header({ locale, dict }: HeaderProps) {
                         ? "text-gold"
                         : "text-gold"
                       : scrolled
-                        ? "text-black-deep/30 hover:text-black-deep/60"
-                        : "text-beige/30 hover:text-beige/60"
+                        ? "text-black-deep/25 hover:text-black-deep/50"
+                        : "text-white/25 hover:text-white/50"
                   }`}
                 >
                   {l.toUpperCase()}
@@ -93,7 +93,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                 {i < locales.length - 1 && (
                   <span
                     className={`text-[11px] ${
-                      scrolled ? "text-black-deep/15" : "text-beige/15"
+                      scrolled ? "text-black-deep/10" : "text-white/15"
                     }`}
                   >
                     |
@@ -107,8 +107,8 @@ export default function Header({ locale, dict }: HeaderProps) {
             href={`/${locale}/contact`}
             className={`ml-4 px-7 py-2.5 text-[12px] tracking-[0.12em] uppercase transition-all duration-300 ${
               scrolled
-                ? "border border-black-deep/20 text-black-deep/70 hover:border-gold hover:text-gold"
-                : "border border-beige/25 text-beige/70 hover:border-gold hover:text-gold"
+                ? "border border-[#0E0E0E]/20 text-[#0E0E0E]/70 hover:border-gold hover:text-gold"
+                : "border border-white/25 text-white/70 hover:border-gold hover:text-gold"
             }`}
           >
             {dict.nav.contactUs}
@@ -127,8 +127,8 @@ export default function Header({ locale, dict }: HeaderProps) {
                     l === locale
                       ? "text-gold"
                       : scrolled
-                        ? "text-black-deep/30"
-                        : "text-beige/30"
+                        ? "text-black-deep/25"
+                        : "text-white/25"
                   }`}
                 >
                   {l.toUpperCase()}
@@ -136,7 +136,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                 {i < locales.length - 1 && (
                   <span
                     className={`text-[10px] ${
-                      scrolled ? "text-black-deep/15" : "text-beige/15"
+                      scrolled ? "text-black-deep/10" : "text-white/15"
                     }`}
                   >
                     |
@@ -153,17 +153,17 @@ export default function Header({ locale, dict }: HeaderProps) {
           >
             <span
               className={`block w-5 h-px transition-all duration-300 ${
-                scrolled ? "bg-black-deep" : "bg-beige"
+                scrolled ? "bg-[#0E0E0E]" : "bg-white"
               } ${mobileOpen ? "rotate-45 translate-y-[3px]" : ""}`}
             />
             <span
               className={`block w-5 h-px transition-all duration-300 ${
-                scrolled ? "bg-black-deep" : "bg-beige"
+                scrolled ? "bg-[#0E0E0E]" : "bg-white"
               } ${mobileOpen ? "opacity-0" : ""}`}
             />
             <span
               className={`block w-5 h-px transition-all duration-300 ${
-                scrolled ? "bg-black-deep" : "bg-beige"
+                scrolled ? "bg-[#0E0E0E]" : "bg-white"
               } ${mobileOpen ? "-rotate-45 -translate-y-[3px]" : ""}`}
             />
           </button>
