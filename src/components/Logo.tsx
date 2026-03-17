@@ -1,24 +1,31 @@
 interface LogoProps {
   variant?: "light" | "dark";
   className?: string;
-  height?: number;
+  size?: "default" | "compact";
 }
 
 export default function Logo({
   variant = "light",
   className = "",
-  height = 28,
+  size = "default",
 }: LogoProps) {
-  const src = variant === "light" ? "/logo/logo-light.svg" : "/logo/logo-dark.svg";
-  const alt = "Lisbon Private Office";
+  const color =
+    variant === "light" ? "text-white/90" : "text-[#0E0E0E]";
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={alt}
-      style={{ height: `${height}px`, width: "auto" }}
-      className={`block ${className}`}
-    />
+    <span
+      className={`block select-none ${color} ${className}`}
+      aria-label="Lisbon Private Office"
+    >
+      <span
+        className={`block font-light tracking-[0.3em] uppercase leading-none ${
+          size === "compact"
+            ? "text-[12px]"
+            : "text-[14px] lg:text-[15px]"
+        }`}
+      >
+        Lisbon Private Office
+      </span>
+    </span>
   );
 }

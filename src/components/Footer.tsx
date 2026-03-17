@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/getDictionary";
-import Logo from "./Logo";
 
 interface FooterProps {
   locale: Locale;
@@ -19,14 +18,14 @@ export default function Footer({ locale, dict }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-8">
           {/* Brand */}
           <div className="md:col-span-5">
-            <Link href={`/${locale}`} className="inline-block mb-6">
-              <Logo variant="light" height={20} />
-            </Link>
+            <h3 className="font-serif text-[22px] tracking-[0.08em] text-beige/90 mb-5">
+              Lisbon Private Office
+            </h3>
             <p className="text-[13px] leading-[1.8] text-beige/35 max-w-xs">
               {dict.footer.description}
             </p>
             <p className="text-[12px] tracking-[0.15em] text-beige/20 mt-6 uppercase">
-              Lisbon, Portugal
+              {dict.hero.locations}
             </p>
           </div>
 
