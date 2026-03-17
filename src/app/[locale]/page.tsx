@@ -32,18 +32,18 @@ export default async function HomePage({
             <p className="text-[11px] tracking-[0.35em] uppercase text-gold/60 mb-8">
               {dict.hero.locations}
             </p>
-            <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[80px] text-white/90 leading-[1.05] font-light mb-8">
+            <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[80px] text-white/90 leading-[1.05] font-light mb-10 lg:mb-12">
               {dict.hero.title1}<br />{dict.hero.title2}
             </h1>
-            <p className="text-[16px] md:text-[18px] text-white/45 font-light tracking-[0.02em] mb-6">
+            <p className="text-[19px] md:text-[22px] leading-[1.6] text-gold/80 font-serif italic max-w-xl mb-10 lg:mb-12">
+              {dict.hero.tagline}
+            </p>
+            <div className="w-10 h-px bg-white/15 mb-10 lg:mb-12" />
+            <p className="text-[14px] md:text-[15px] leading-[1.9] text-white/30 max-w-lg mb-4">
               {dict.hero.subtitle}
             </p>
-            <div className="w-10 h-px bg-gold/40 my-10" />
-            <p className="text-[15px] leading-[1.9] text-white/35 max-w-lg mb-8">
+            <p className="text-[13px] leading-[1.9] text-white/22 max-w-lg mb-14">
               {dict.hero.text1}
-            </p>
-            <p className="text-[17px] leading-[1.7] text-gold/70 font-serif italic max-w-lg mb-14">
-              {dict.hero.tagline}
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <Link href={`/${locale}/contact`} className="px-9 py-3.5 bg-gold/90 text-black-deep text-[12px] tracking-[0.12em] uppercase hover:bg-gold transition-all duration-500 text-center">
