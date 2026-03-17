@@ -63,7 +63,7 @@ export default function Header({ locale, dict }: HeaderProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[12px] tracking-[0.08em] transition-colors duration-300 hover:text-gold ${
+                className={`text-[12px] tracking-[0.08em] transition-colors duration-400 ease-out hover:text-gold ${
                   scrolled ? "text-black-deep/40" : "text-white/50"
                 }`}
               >
@@ -105,7 +105,7 @@ export default function Header({ locale, dict }: HeaderProps) {
 
           <Link
             href={`/${locale}/contact`}
-            className={`ml-4 px-7 py-2.5 text-[12px] tracking-[0.15em] uppercase transition-all duration-300 ease-out ${
+            className={`ml-4 px-7 py-2.5 text-[12px] tracking-[0.15em] uppercase transition-all duration-400 ease-out ${
               scrolled
                 ? "border border-[#0E0E0E]/20 text-[#0E0E0E]/70 hover:border-gold hover:text-gold"
                 : "border border-white/25 text-white/70 hover:border-gold hover:text-gold"

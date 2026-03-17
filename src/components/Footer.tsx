@@ -44,7 +44,7 @@ export default function Footer({ locale, dict }: FooterProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[13px] text-beige/30 hover:text-gold/70 transition-colors duration-300 ease-out"
+                  className="text-[13px] text-beige/30 hover:text-gold/70 transition-colors duration-400 ease-out"
                 >
                   {link.label}
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer({ locale, dict }: FooterProps) {
               <p>Lisbon, Portugal</p>
               <a
                 href="mailto:contact@lisbonprivateoffice.com"
-                className="hover:text-gold/70 transition-colors duration-300 ease-out"
+                className="hover:text-gold/70 transition-colors duration-400 ease-out"
               >
                 contact@lisbonprivateoffice.com
               </a>
@@ -69,7 +69,7 @@ export default function Footer({ locale, dict }: FooterProps) {
                 href="https://wa.me/351000000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gold/70 transition-colors duration-300 ease-out"
+                className="hover:text-gold/70 transition-colors duration-400 ease-out"
               >
                 WhatsApp
               </a>
@@ -77,7 +77,7 @@ export default function Footer({ locale, dict }: FooterProps) {
                 href="https://instagram.com/lisbonprivateoffice"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gold/70 transition-colors duration-300 ease-out"
+                className="hover:text-gold/70 transition-colors duration-400 ease-out"
               >
                 Instagram
               </a>
