@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { locales, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/getDictionary";
+import Logo from "./Logo";
 
 interface HeaderProps {
   locale: Locale;
@@ -29,7 +30,6 @@ export default function Header({ locale, dict }: HeaderProps) {
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
 
-  // Build locale-switched path
   function getLocalePath(targetLocale: string) {
     const segments = pathname.split("/");
     segments[1] = targetLocale;
@@ -46,14 +46,17 @@ export default function Header({ locale, dict }: HeaderProps) {
     >
       <div className="max-w-[1400px] mx-auto px-8 lg:px-16 flex items-center justify-between h-[80px] lg:h-[88px]">
         {/* Logo */}
-        <Link href={`/${locale}`}>
-          <span
-            className={`font-serif text-[17px] tracking-[0.22em] uppercase transition-colors duration-500 ${
-              scrolled ? "text-black-deep" : "text-beige"
-            }`}
-          >
-            Lisbon Private Office
-          </span>
+        <Link href={`/${locale}`} className="relative shrink-0">
+          <Logo
+            variant={scrolled ? "dark" : "light"}
+            height={26}
+            className="hidden lg:block transition-opacity duration-500"
+          />
+          <Logo
+            variant={scrolled ? "dark" : "light"}
+            height={22}
+            className="lg:hidden transition-opacity duration-500"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -80,9 +83,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                   href={getLocalePath(l)}
                   className={`text-[11px] tracking-[0.1em] transition-colors duration-300 px-1.5 py-0.5 ${
                     l === locale
-                      ? scrolled
-                        ? "text-gold"
-                        : "text-gold"
+                      ? "text-gold"
                       : scrolled
                         ? "text-black-deep/30 hover:text-black-deep/60"
                         : "text-beige/30 hover:text-beige/60"
@@ -117,7 +118,6 @@ export default function Header({ locale, dict }: HeaderProps) {
 
         {/* Mobile: Language + Toggle */}
         <div className="md:hidden flex items-center gap-4">
-          {/* Mobile Language Switcher */}
           <div className="flex items-center gap-0.5">
             {locales.map((l, i) => (
               <span key={l} className="flex items-center">
