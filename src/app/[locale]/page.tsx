@@ -26,25 +26,25 @@ export default async function HomePage({
         <div className="absolute inset-0 bg-gradient-to-r from-black-deep/85 via-black-deep/50 to-black-deep/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-black-deep/50 via-transparent to-black-deep/30" />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-20 w-full pt-52 pb-32 lg:pt-60 lg:pb-44">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-20 w-full pt-56 pb-36 lg:pt-[17rem] lg:pb-52">
           <div className="max-w-2xl">
-            <p className="text-[10px] tracking-[0.4em] uppercase text-gold/40 mb-12 lg:mb-14">
+            <p className="text-[10px] tracking-[0.4em] uppercase text-gold/40 mb-14 lg:mb-16">
               {dict.hero.locations}
             </p>
-            <h1 className="font-serif text-[40px] md:text-[54px] lg:text-[66px] text-white leading-[1.1] font-light mb-10 lg:mb-12">
+            <h1 className="font-serif text-[40px] md:text-[54px] lg:text-[66px] text-white leading-[1.1] font-light mb-12 lg:mb-14">
               {dict.hero.title1}<br />{dict.hero.title2}
             </h1>
-            <p className="text-[14px] md:text-[15px] lg:text-[16px] leading-[1.75] text-white/50 tracking-[0.01em] max-w-md mb-8 lg:mb-10">
+            <p className="text-[14px] md:text-[15px] lg:text-[16px] leading-[1.75] text-white/50 tracking-[0.01em] max-w-md mb-10 lg:mb-12">
               {dict.hero.subtitle}
             </p>
-            <p className="text-[12px] md:text-[13px] leading-[1.6] text-[#C6A66B]/55 font-serif italic max-w-md mb-14 lg:mb-16">
+            <p className="text-[12px] md:text-[13px] leading-[1.6] text-[#C6A66B]/55 font-serif italic max-w-md mb-16 lg:mb-20">
               {dict.hero.tagline}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href={`/${locale}/contact`} className="px-12 py-4 bg-[#C6A66B] text-[#0E0E0E] text-[11px] tracking-[0.2em] uppercase font-semibold hover:bg-white hover:text-[#0E0E0E] transition-all duration-300 ease-out text-center">
+            <div className="flex flex-col sm:flex-row gap-5">
+              <Link href={`/${locale}/contact`} className="px-14 py-[18px] bg-[#C6A66B] text-[#0E0E0E] text-[11px] tracking-[0.2em] uppercase font-semibold hover:bg-white hover:text-[#0E0E0E] transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] text-center">
                 {dict.hero.cta1}
               </Link>
-              <Link href={`/${locale}/services`} className="px-10 py-4 border border-white/10 text-white/30 text-[11px] tracking-[0.18em] uppercase hover:border-white/25 hover:text-white/60 transition-all duration-300 ease-out text-center">
+              <Link href={`/${locale}/services`} className="px-12 py-[18px] border border-white/10 text-white/30 text-[11px] tracking-[0.18em] uppercase hover:border-white/20 hover:text-white/55 transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] text-center">
                 {dict.hero.cta2}
               </Link>
             </div>
