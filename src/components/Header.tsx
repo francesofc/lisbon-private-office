@@ -176,22 +176,22 @@ export default function Header({ locale, dict }: HeaderProps) {
           mobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="flex flex-col px-8 py-8 gap-5 bg-offwhite/98 backdrop-blur-lg border-t border-beige-dark/20">
+        <nav className="flex flex-col px-8 py-10 gap-7 bg-offwhite/98 backdrop-blur-lg border-t border-beige-dark/15">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-[13px] tracking-[0.08em] text-black-deep/50 hover:text-gold transition-colors duration-300"
+              className="text-[14px] tracking-[0.06em] text-black-deep/55 hover:text-gold transition-colors duration-400 py-1"
             >
               {link.label}
             </Link>
           ))}
-          <div className="mt-3 pt-5 border-t border-beige-dark/20">
+          <div className="mt-4 pt-7 border-t border-beige-dark/15">
             <Link
               href={`/${locale}/contact`}
               onClick={() => setMobileOpen(false)}
-              className="inline-block px-7 py-2.5 border border-black-deep/20 text-[12px] tracking-[0.15em] uppercase text-black-deep/70 hover:border-gold hover:text-gold transition-all duration-300 ease-out"
+              className="block w-full py-4 bg-[#C6A66B] text-[#0E0E0E] text-[11px] tracking-[0.2em] uppercase font-semibold text-center transition-colors duration-400"
             >
               {dict.nav.contactUs}
             </Link>

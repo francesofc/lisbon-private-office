@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, type Locale } from "@/i18n/config";
 
@@ -81,6 +82,7 @@ export default async function LocaleLayout({
         <Header locale={locale as Locale} dict={dict} />
         <main>{children}</main>
         <Footer locale={locale as Locale} dict={dict} />
+        <MobileStickyCTA locale={locale as Locale} label={dict.hero.cta1} />
       </body>
     </html>
   );
