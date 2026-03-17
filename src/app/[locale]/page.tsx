@@ -70,13 +70,13 @@ export default async function HomePage({
           <FadeIn>
             <SectionHeading label={dict.whyUs.label} title={dict.whyUs.title} subtitle={dict.whyUs.subtitle} />
           </FadeIn>
-          <div className="mt-32 lg:mt-40 grid grid-cols-1 md:grid-cols-3 gap-24 lg:gap-28">
+          <div className="mt-32 lg:mt-40 grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-10">
             {dict.whyUs.items.map((item, i) => (
               <FadeIn key={item.title} delay={i * 120}>
-                <div className="text-center group">
-                  <div className="w-5 h-px bg-gold/25 mx-auto mb-12 group-hover:w-9 transition-all duration-400 ease-out" />
-                  <h3 className="font-serif text-[26px] lg:text-[30px] font-light mb-8 text-black-deep tracking-[-0.02em]">{item.title}</h3>
-                  <p className="text-[13px] leading-[2.05] tracking-[0.015em] text-warm-gray/70 max-w-[220px] mx-auto">{item.description}</p>
+                <div className="text-center group p-10 lg:p-14 hover:bg-white/60 transition-all duration-500 ease-out">
+                  <div className="w-5 h-px bg-gold/25 mx-auto mb-12 group-hover:w-12 group-hover:bg-gold/45 transition-all duration-500 ease-out" />
+                  <h3 className="font-serif text-[26px] lg:text-[30px] font-light mb-8 text-black-deep tracking-[-0.02em] group-hover:text-black-deep transition-colors duration-400">{item.title}</h3>
+                  <p className="text-[13px] leading-[2.05] tracking-[0.015em] text-warm-gray/65 max-w-[230px] mx-auto group-hover:text-warm-gray/85 transition-colors duration-400">{item.description}</p>
                 </div>
               </FadeIn>
             ))}
@@ -98,12 +98,12 @@ export default async function HomePage({
             </div>
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="mt-20 lg:mt-28 grid grid-cols-1 md:grid-cols-3 gap-px bg-beige-dark/25">
+            <div className="mt-20 lg:mt-28 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
               {dict.whoIsFor.profiles.map((profile) => (
-                <div key={profile.title} className="bg-beige p-16 lg:p-24 group">
-                  <div className="w-5 h-px bg-gold/30 mb-10 group-hover:w-10 transition-all duration-400 ease-out" />
+                <div key={profile.title} className="bg-beige p-14 lg:p-20 group border border-beige-dark/15 hover:border-beige-dark/30 hover:bg-white/30 transition-all duration-500 ease-out">
+                  <div className="w-5 h-px bg-gold/30 mb-10 group-hover:w-10 group-hover:bg-gold/50 transition-all duration-500 ease-out" />
                   <h3 className="font-serif text-[22px] lg:text-[26px] font-light text-black-deep tracking-[-0.02em] mb-6">{profile.title}</h3>
-                  <p className="text-[13px] leading-[2] tracking-[0.015em] text-warm-gray/80">{profile.description}</p>
+                  <p className="text-[13px] leading-[2] tracking-[0.015em] text-warm-gray/70 group-hover:text-warm-gray/90 transition-colors duration-400">{profile.description}</p>
                 </div>
               ))}
             </div>
@@ -121,7 +121,7 @@ export default async function HomePage({
             <SectionHeading label={dict.setup.label} title={dict.setup.title} subtitle={dict.setup.subtitle} />
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="mt-28 grid grid-cols-1 lg:grid-cols-3 gap-px bg-beige-dark/20 lg:items-start">
+            <div className="mt-28 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6 lg:items-start">
               <ServiceCard title={dict.setup.basic.title} price={dict.setup.basic.price} features={[...dict.setup.basic.features]} />
               <ServiceCard title={dict.setup.premium.title} price={dict.setup.premium.price} highlighted badge={dict.setup.recommended} features={[...dict.setup.premium.features]} />
               <ServiceCard title={dict.setup.private.title} price={dict.setup.private.price} features={[...dict.setup.private.features]} />
