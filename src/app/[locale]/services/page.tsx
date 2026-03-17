@@ -33,13 +33,13 @@ export default async function ServicesPage({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,_rgba(198,168,107,0.03)_0%,_transparent_70%)]" />
         <div className="relative max-w-[1400px] mx-auto px-8 lg:px-16">
           <p className="text-[11px] tracking-[0.35em] uppercase text-gold/50 mb-8">
-            {dict.servicesOverview.label}
+            {dict.setup.label}
           </p>
           <h1 className="font-serif text-[42px] md:text-[56px] lg:text-[68px] text-beige/90 leading-[1.08] font-light max-w-2xl">
-            {dict.servicesOverview.title}
+            {dict.nav.services}
           </h1>
           <p className="mt-8 text-[15px] leading-[1.9] text-beige/30 max-w-lg">
-            {dict.servicesOverview.subtitle}
+            {dict.setup.subtitle}
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-offwhite to-transparent" />
@@ -49,9 +49,9 @@ export default async function ServicesPage({
       <section id="setup" className="py-32 lg:py-44 bg-offwhite scroll-mt-24">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
           <SectionHeading label={dict.setup.label} title={dict.setup.title} subtitle={dict.setup.subtitle} />
-          <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-px bg-beige-dark/25">
+          <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-px bg-beige-dark/25 lg:items-start">
             <ServiceCard title={dict.setup.basic.title} price={dict.setup.basic.price} features={[...dict.setup.basic.features]} />
-            <ServiceCard title={dict.setup.premium.title} price={dict.setup.premium.price} highlighted features={[...dict.setup.premium.features]} />
+            <ServiceCard title={dict.setup.premium.title} price={dict.setup.premium.price} highlighted badge={dict.setup.recommended} features={[...dict.setup.premium.features]} />
             <ServiceCard title={dict.setup.private.title} price={dict.setup.private.price} features={[...dict.setup.private.features]} />
           </div>
         </div>
@@ -83,14 +83,12 @@ export default async function ServicesPage({
       {/* Lifestyle */}
       <section id="lifestyle" className="py-32 lg:py-44 bg-black-deep scroll-mt-24 relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+        <div className="max-w-[900px] mx-auto px-8 lg:px-16">
           <SectionHeading label={dict.lifestyle.label} title={dict.lifestyle.title} subtitle={dict.lifestyle.subtitle} light />
-          <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-beige/5">
-            {dict.lifestyle.servicesDetailed.map((service) => (
-              <div key={service.title} className="bg-black-deep p-8 lg:p-10 group">
-                <div className="w-5 h-px bg-gold/20 mb-5 group-hover:w-8 transition-all duration-700" />
-                <h4 className="font-serif text-[18px] font-light text-beige/70 mb-3">{service.title}</h4>
-                <p className="text-[12px] leading-[1.8] text-beige/30">{service.items}</p>
+          <div className="mt-16 flex flex-wrap justify-center gap-4">
+            {dict.lifestyle.categories.map((category) => (
+              <div key={category} className="px-8 py-4 border border-beige/10 text-[12px] tracking-[0.08em] text-beige/40 hover:border-gold/25 hover:text-gold/60 transition-all duration-500">
+                {category}
               </div>
             ))}
           </div>

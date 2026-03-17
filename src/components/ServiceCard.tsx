@@ -3,6 +3,7 @@ interface ServiceCardProps {
   price: string;
   features: string[];
   highlighted?: boolean;
+  badge?: string;
 }
 
 export default function ServiceCard({
@@ -10,12 +11,13 @@ export default function ServiceCard({
   price,
   features,
   highlighted = false,
+  badge,
 }: ServiceCardProps) {
   return (
     <div
       className={`group relative p-10 lg:p-12 transition-all duration-500 ${
         highlighted
-          ? "bg-black-deep text-beige"
+          ? "bg-black-deep text-beige lg:scale-[1.02] lg:-my-4 lg:z-10 lg:shadow-2xl"
           : "bg-white hover:bg-white"
       }`}
     >
@@ -23,12 +25,21 @@ export default function ServiceCard({
       <div
         className={`absolute top-0 left-10 right-10 h-px ${
           highlighted
-            ? "bg-gold/30"
+            ? "bg-gold/40"
             : "bg-beige-dark/40 group-hover:bg-gold/30"
         } transition-colors duration-500`}
       />
 
-      <div className="mb-10">
+      {/* Badge */}
+      {badge && (
+        <div className="mb-6">
+          <span className="inline-block px-4 py-1.5 text-[10px] tracking-[0.15em] uppercase bg-gold/15 text-gold border border-gold/20">
+            {badge}
+          </span>
+        </div>
+      )}
+
+      <div className={badge ? "mb-8" : "mb-10"}>
         <h3
           className={`font-serif text-[24px] lg:text-[28px] font-light mb-3 ${
             highlighted ? "text-beige/90" : "text-black-deep"
@@ -36,11 +47,7 @@ export default function ServiceCard({
         >
           {title}
         </h3>
-        <p
-          className={`font-serif text-[28px] lg:text-[32px] font-light ${
-            highlighted ? "text-gold" : "text-gold"
-          }`}
-        >
+        <p className="font-serif text-[28px] lg:text-[32px] font-light text-gold">
           {price}
         </p>
       </div>
