@@ -27,7 +27,7 @@ export default async function HomePage({
         <div className="absolute inset-0 bg-gradient-to-r from-black-deep/90 via-black-deep/55 to-black-deep/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-black-deep/70 via-black-deep/20 to-black-deep/35 md:from-black-deep/55 md:via-transparent" />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-7 md:px-8 lg:px-20 w-full pb-24 pt-24 md:pt-60 md:pb-40 lg:pt-[19rem] lg:pb-56">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-7 md:px-8 lg:px-20 w-full pb-24 pt-24 md:pt-64 md:pb-44 lg:pt-[20rem] lg:pb-60">
           <div className="max-w-2xl">
             <FadeIn delay={100}>
               <p className="text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-gold/40 mb-7 md:mb-16 lg:mb-20">
@@ -35,7 +35,7 @@ export default async function HomePage({
               </p>
             </FadeIn>
             <FadeIn delay={250}>
-              <h1 className="font-serif text-[32px] md:text-[54px] lg:text-[66px] text-white leading-[1.08] font-light tracking-[-0.02em] mb-6 md:mb-14 lg:mb-16">
+              <h1 className="font-serif text-[32px] md:text-[58px] lg:text-[72px] text-white leading-[1.06] font-light tracking-[-0.025em] mb-6 md:mb-14 lg:mb-16">
                 {dict.hero.title1}<br />{dict.hero.title2}
               </h1>
             </FadeIn>
