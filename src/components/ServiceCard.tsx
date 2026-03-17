@@ -15,7 +15,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div
-      className={`group relative p-12 lg:p-14 transition-all duration-300 ease-out ${
+      className={`group relative p-14 lg:p-16 transition-all duration-300 ease-out ${
         highlighted
           ? "bg-black-deep text-beige lg:scale-[1.02] lg:-my-4 lg:z-10 lg:shadow-2xl"
           : "bg-white hover:bg-white"
