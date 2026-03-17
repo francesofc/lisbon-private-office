@@ -17,15 +17,12 @@ export default async function HomePage({
     <>
       {/* ============ HERO ============ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image */}
-        <Image
-          src="/images/hero-lisbon.jpg"
+        {/* Background Image - using native img to avoid CDN processing issues */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/assets/hero-bg.webp"
           alt="Lisbon skyline at golden hour"
-          fill
-          priority
-          quality={90}
-          className="object-cover object-center"
-          sizes="100vw"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
         {/* Dark overlay for readability */}
