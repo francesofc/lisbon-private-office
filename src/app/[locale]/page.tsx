@@ -65,7 +65,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ WHY CLIENTS TRUST US ============ */}
-      <section className="py-40 lg:py-56 bg-offwhite">
+      <section className="py-40 lg:py-56 bg-offwhite relative">
         <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
           <FadeIn>
             <SectionHeading label={dict.whyUs.label} title={dict.whyUs.title} subtitle={dict.whyUs.subtitle} />
@@ -82,10 +82,14 @@ export default async function HomePage({
             ))}
           </div>
         </div>
+        {/* Divider → beige */}
+        <div className="absolute bottom-0 left-0 right-0 h-px">
+          <div className="max-w-[600px] mx-auto h-full bg-gradient-to-r from-transparent via-beige-dark/30 to-transparent" />
+        </div>
       </section>
 
       {/* ============ WHO THIS IS FOR ============ */}
-      <section className="py-36 lg:py-52 bg-beige">
+      <section className="py-36 lg:py-52 bg-beige relative">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
           <FadeIn>
             <SectionHeading label={dict.whoIsFor.label} title={dict.whoIsFor.title} />
@@ -102,10 +106,14 @@ export default async function HomePage({
             </div>
           </FadeIn>
         </div>
+        {/* Divider → offwhite */}
+        <div className="absolute bottom-0 left-0 right-0 h-px">
+          <div className="max-w-[600px] mx-auto h-full bg-gradient-to-r from-transparent via-beige-dark/25 to-transparent" />
+        </div>
       </section>
 
       {/* ============ PORTUGAL SETUP SERVICE ============ */}
-      <section className="py-40 lg:py-56 bg-offwhite">
+      <section className="py-40 lg:py-56 bg-offwhite relative">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
           <FadeIn>
             <SectionHeading label={dict.setup.label} title={dict.setup.title} subtitle={dict.setup.subtitle} />
@@ -118,10 +126,14 @@ export default async function HomePage({
             </div>
           </FadeIn>
         </div>
+        {/* Divider → beige */}
+        <div className="absolute bottom-0 left-0 right-0 h-px">
+          <div className="max-w-[600px] mx-auto h-full bg-gradient-to-r from-transparent via-beige-dark/30 to-transparent" />
+        </div>
       </section>
 
       {/* ============ WHAT HAPPENS AFTER YOU CONTACT US ============ */}
-      <section className="py-36 lg:py-52 bg-beige">
+      <section className="py-36 lg:py-52 bg-beige relative">
         <div className="max-w-[1000px] mx-auto px-8 lg:px-16">
           <FadeIn>
             <SectionHeading label={dict.process.label} title={dict.process.title} />
@@ -175,10 +187,11 @@ export default async function HomePage({
             </div>
           </FadeIn>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
       </section>
 
       {/* ============ LIFESTYLE & ACCESS ============ */}
-      <section className="py-36 lg:py-48 bg-offwhite">
+      <section className="py-36 lg:py-48 bg-offwhite relative">
         <div className="max-w-[900px] mx-auto px-8 lg:px-16">
           <FadeIn>
             <SectionHeading label={dict.lifestyle.label} title={dict.lifestyle.title} subtitle={dict.lifestyle.subtitle} />
@@ -194,10 +207,14 @@ export default async function HomePage({
             <p className="mt-14 text-center text-[12px] tracking-[0.05em] text-warm-gray/60 italic">{dict.lifestyle.note}</p>
           </FadeIn>
         </div>
+        {/* Divider → beige */}
+        <div className="absolute bottom-0 left-0 right-0 h-px">
+          <div className="max-w-[600px] mx-auto h-full bg-gradient-to-r from-transparent via-beige-dark/25 to-transparent" />
+        </div>
       </section>
 
       {/* ============ ONGOING PRIVATE ACCESS (MEMBERSHIP) ============ */}
-      <section className="py-36 lg:py-48 bg-beige">
+      <section className="py-36 lg:py-48 bg-beige relative">
         <div className="max-w-[900px] mx-auto px-8 lg:px-16">
           <FadeIn>
             <SectionHeading label={dict.membership.label} title={dict.membership.title} subtitle={dict.membership.subtitle} />
@@ -223,10 +240,14 @@ export default async function HomePage({
             </div>
           </FadeIn>
         </div>
+        {/* Divider → offwhite */}
+        <div className="absolute bottom-0 left-0 right-0 h-px">
+          <div className="max-w-[600px] mx-auto h-full bg-gradient-to-r from-transparent via-beige-dark/25 to-transparent" />
+        </div>
       </section>
 
       {/* ============ OUR NETWORK ============ */}
-      <section className="py-36 lg:py-48 bg-offwhite">
+      <section className="py-36 lg:py-48 bg-offwhite relative">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
           <FadeIn>
             <SectionHeading label={dict.network.label} title={dict.network.title} subtitle={dict.network.subtitle} />
@@ -260,6 +281,7 @@ export default async function HomePage({
             </div>
           </FadeIn>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
       </section>
 
       {/* ============ FINAL CTA ============ */}
