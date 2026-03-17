@@ -27,14 +27,18 @@
     color: var(--color-black-deep);
     background-color: var(--color-offwhite);
     font-size: 15px;
-    line-height: 1.75;
-    letter-spacing: 0.015em;
+    line-height: 1.8;
+    letter-spacing: 0.018em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    font-weight: 400;
-    letter-spacing: -0.015em;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    line-height: 2;
   }
 
   ::selection {
@@ -44,12 +48,21 @@
 
   /* Refined scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
   ::-webkit-scrollbar-track {
     background: var(--color-offwhite);
   }
   ::-webkit-scrollbar-thumb {
     background: var(--color-beige-dark);
+    border-radius: 3px;
+  }
+
+  /* Global link transitions */
+  a {
+    transition: color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+                border-color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+                background-color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+                opacity 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 }
