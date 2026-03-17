@@ -27,12 +27,13 @@ const pt = {
     cta2: "Ver Serviços",
   },
   whyUs: {
-    label: "O Que Oferecemos",
-    title: "Porque os Nossos Clientes Trabalham Connosco",
+    label: "Porquê Nós",
+    title: "Porque os Nossos Clientes Confiam em Nós",
+    subtitle: "Pensado para clientes que valorizam discrição, eficiência e total tranquilidade.",
     items: [
-      { title: "Um Ponto de Contacto Único", description: "Um contacto de confiança único para simplificar cada aspeto da sua instalação e vida quotidiana em Portugal." },
-      { title: "Rede Local de Confiança", description: "Trabalhamos através de uma rede cuidadosamente selecionada de profissionais fiáveis e parceiros locais premium." },
-      { title: "Execução Discreta", description: "Cada pedido é tratado com clareza, discrição e uma forte atenção ao detalhe." },
+      { title: "Discrição", description: "Operamos de forma discreta, eficiente e sem visibilidade desnecessária." },
+      { title: "Controlo", description: "Cada aspeto da sua vida em Portugal é gerido com precisão e clareza." },
+      { title: "Tempo", description: "Eliminamos fricções para que se possa focar apenas no que realmente importa." },
     ],
   },
   setup: {

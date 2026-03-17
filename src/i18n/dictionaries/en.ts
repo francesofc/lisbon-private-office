@@ -27,20 +27,21 @@ const en = {
     cta2: "View Services",
   },
   whyUs: {
-    label: "What We Offer",
-    title: "Why Clients Work With Us",
+    label: "Why Us",
+    title: "Why Clients Trust Us",
+    subtitle: "Built for clients who value discretion, efficiency and total peace of mind.",
     items: [
       {
-        title: "One Point of Contact",
-        description: "A single trusted contact to simplify every aspect of your installation and daily life in Portugal.",
+        title: "Discretion",
+        description: "We operate quietly, efficiently, and without unnecessary visibility.",
       },
       {
-        title: "Trusted Local Network",
-        description: "We work through a carefully selected network of reliable professionals and premium local partners.",
+        title: "Control",
+        description: "Every aspect of your life in Portugal is handled with precision and clarity.",
       },
       {
-        title: "Discreet Execution",
-        description: "Every request is handled with clarity, discretion and a strong attention to detail.",
+        title: "Time",
+        description: "We eliminate friction so you can focus only on what truly matters.",
       },
     ],
   },

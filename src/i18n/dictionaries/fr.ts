@@ -27,12 +27,13 @@ const fr = {
     cta2: "Voir les Services",
   },
   whyUs: {
-    label: "Ce Que Nous Offrons",
+    label: "Pourquoi Nous",
     title: "Pourquoi Nos Clients Nous Font Confiance",
+    subtitle: "Conçu pour des clients qui valorisent la discrétion, l'efficacité et une totale tranquillité d'esprit.",
     items: [
-      { title: "Un Interlocuteur Unique", description: "Un contact de confiance unique pour simplifier chaque aspect de votre installation et de votre quotidien au Portugal." },
-      { title: "Un Réseau Local de Confiance", description: "Nous travaillons avec un réseau soigneusement sélectionné de professionnels fiables et de partenaires locaux premium." },
-      { title: "Exécution Discrète", description: "Chaque demande est traitée avec clarté, discrétion et une grande attention aux détails." },
+      { title: "Discrétion", description: "Nous opérons discrètement, efficacement, et sans visibilité superflue." },
+      { title: "Contrôle", description: "Chaque aspect de votre vie au Portugal est géré avec précision et clarté." },
+      { title: "Temps", description: "Nous éliminons les frictions pour que vous puissiez vous concentrer sur l'essentiel." },
     ],
   },
   setup: {

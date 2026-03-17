@@ -54,16 +54,16 @@ export default async function HomePage({
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-offwhite to-transparent" />
       </section>
 
-      {/* ============ WHY CLIENTS WORK WITH US ============ */}
-      <section className="py-28 lg:py-36 bg-offwhite">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-          <SectionHeading label={dict.whyUs.label} title={dict.whyUs.title} />
-          <div className="mt-20 lg:mt-24 grid grid-cols-1 md:grid-cols-3 gap-px bg-beige-dark/30">
+      {/* ============ WHY CLIENTS TRUST US ============ */}
+      <section className="py-32 lg:py-44 bg-offwhite">
+        <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
+          <SectionHeading label={dict.whyUs.label} title={dict.whyUs.title} subtitle={dict.whyUs.subtitle} />
+          <div className="mt-24 lg:mt-32 grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-20">
             {dict.whyUs.items.map((item) => (
-              <div key={item.title} className="bg-offwhite text-center p-12 lg:p-16 group">
-                <div className="w-8 h-px bg-gold/40 mx-auto mb-8 group-hover:w-12 transition-all duration-700" />
-                <h3 className="font-serif text-[24px] lg:text-[28px] font-light mb-5 text-black-deep">{item.title}</h3>
-                <p className="text-[13px] leading-[1.85] text-warm-gray max-w-[260px] mx-auto">{item.description}</p>
+              <div key={item.title} className="text-center group">
+                <div className="w-6 h-px bg-gold/30 mx-auto mb-10 group-hover:w-10 transition-all duration-700" />
+                <h3 className="font-serif text-[26px] lg:text-[30px] font-light mb-6 text-black-deep tracking-[-0.01em]">{item.title}</h3>
+                <p className="text-[13px] leading-[1.9] text-warm-gray/80 max-w-[240px] mx-auto">{item.description}</p>
               </div>
             ))}
           </div>
