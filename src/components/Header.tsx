@@ -105,7 +105,7 @@ export default function Header({ locale, dict }: HeaderProps) {
 
           <Link
             href={`/${locale}/contact`}
-            className={`ml-4 px-7 py-2.5 text-[12px] tracking-[0.12em] uppercase transition-all duration-300 ${
+            className={`ml-4 px-7 py-2.5 text-[12px] tracking-[0.15em] uppercase transition-all duration-300 ease-out ${
               scrolled
                 ? "border border-[#0E0E0E]/20 text-[#0E0E0E]/70 hover:border-gold hover:text-gold"
                 : "border border-white/25 text-white/70 hover:border-gold hover:text-gold"
@@ -191,7 +191,7 @@ export default function Header({ locale, dict }: HeaderProps) {
             <Link
               href={`/${locale}/contact`}
               onClick={() => setMobileOpen(false)}
-              className="inline-block px-7 py-2.5 border border-black-deep/20 text-[12px] tracking-[0.12em] uppercase text-black-deep/70 hover:border-gold hover:text-gold transition-all duration-300"
+              className="inline-block px-7 py-2.5 border border-black-deep/20 text-[12px] tracking-[0.15em] uppercase text-black-deep/70 hover:border-gold hover:text-gold transition-all duration-300 ease-out"
             >
               {dict.nav.contactUs}
             </Link>

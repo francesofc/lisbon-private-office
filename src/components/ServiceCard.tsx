@@ -33,7 +33,7 @@ export default function ServiceCard({
       {/* Badge */}
       {badge && (
         <div className="mb-6">
-          <span className="inline-block px-4 py-1.5 text-[10px] tracking-[0.15em] uppercase bg-gold/15 text-gold border border-gold/20">
+          <span className="inline-block px-4 py-1.5 text-[10px] tracking-[0.18em] uppercase bg-gold/15 text-gold border border-gold/20">
             {badge}
           </span>
         </div>
@@ -41,19 +41,19 @@ export default function ServiceCard({
 
       <div className={badge ? "mb-8" : "mb-10"}>
         <h3
-          className={`font-serif text-[24px] lg:text-[28px] font-light mb-3 ${
+          className={`font-serif text-[24px] lg:text-[28px] font-light tracking-[-0.02em] mb-3 ${
             highlighted ? "text-beige/90" : "text-black-deep"
           }`}
         >
           {title}
         </h3>
-        <p className="font-serif text-[28px] lg:text-[32px] font-light text-gold">
+        <p className="font-serif text-[28px] lg:text-[32px] font-light tracking-[-0.01em] text-gold">
           {price}
         </p>
       </div>
 
       <div
-        className={`w-8 h-px mb-8 ${
+        className={`w-8 h-px mb-9 ${
           highlighted ? "bg-beige/15" : "bg-beige-dark/40"
         }`}
       />
@@ -62,7 +62,7 @@ export default function ServiceCard({
         {features.map((feature, i) => (
           <li
             key={i}
-            className={`text-[13px] leading-[1.85] flex items-start gap-4 ${
+            className={`text-[13px] leading-[1.9] tracking-[0.01em] flex items-start gap-4 ${
               highlighted ? "text-beige/45" : "text-warm-gray/85"
             }`}
           >

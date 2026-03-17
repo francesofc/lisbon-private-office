@@ -21,7 +21,7 @@ export default function Footer({ locale, dict }: FooterProps) {
             <h3 className="font-serif text-[22px] tracking-[0.08em] text-beige/90 mb-5">
               Lisbon Private Office
             </h3>
-            <p className="text-[13px] leading-[1.8] text-beige/35 max-w-xs">
+            <p className="text-[13px] leading-[1.9] tracking-[0.015em] text-beige/35 max-w-xs">
               {dict.footer.description}
             </p>
             <p className="text-[12px] tracking-[0.15em] text-beige/20 mt-6 uppercase">
@@ -44,7 +44,7 @@ export default function Footer({ locale, dict }: FooterProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[13px] text-beige/30 hover:text-gold/70 transition-colors duration-500"
+                  className="text-[13px] text-beige/30 hover:text-gold/70 transition-colors duration-300 ease-out"
                 >
                   {link.label}
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer({ locale, dict }: FooterProps) {
               <p>Lisbon, Portugal</p>
               <a
                 href="mailto:contact@lisbonprivateoffice.com"
-                className="hover:text-gold/70 transition-colors duration-500"
+                className="hover:text-gold/70 transition-colors duration-300 ease-out"
               >
                 contact@lisbonprivateoffice.com
               </a>
@@ -69,7 +69,7 @@ export default function Footer({ locale, dict }: FooterProps) {
                 href="https://wa.me/351000000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gold/70 transition-colors duration-500"
+                className="hover:text-gold/70 transition-colors duration-300 ease-out"
               >
                 WhatsApp
               </a>
@@ -77,7 +77,7 @@ export default function Footer({ locale, dict }: FooterProps) {
                 href="https://instagram.com/lisbonprivateoffice"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gold/70 transition-colors duration-500"
+                className="hover:text-gold/70 transition-colors duration-300 ease-out"
               >
                 Instagram
               </a>

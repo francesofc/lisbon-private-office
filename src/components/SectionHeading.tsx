@@ -17,7 +17,7 @@ export default function SectionHeading({
     <div className={centered ? "text-center" : ""}>
       {label && (
         <p
-          className={`text-[11px] tracking-[0.3em] uppercase mb-6 ${
+          className={`text-[11px] tracking-[0.35em] uppercase mb-7 ${
             light ? "text-gold/50" : "text-gold/70"
           }`}
         >
@@ -25,7 +25,7 @@ export default function SectionHeading({
         </p>
       )}
       <h2
-        className={`font-serif text-[32px] md:text-[40px] lg:text-[52px] leading-[1.15] font-light ${
+        className={`font-serif text-[32px] md:text-[40px] lg:text-[52px] leading-[1.18] font-light tracking-[-0.02em] ${
           light ? "text-beige/90" : "text-black-deep"
         }`}
       >
@@ -33,7 +33,7 @@ export default function SectionHeading({
       </h2>
       {subtitle && (
         <p
-          className={`mt-7 text-[14px] leading-[1.9] max-w-xl ${
+          className={`mt-7 text-[14px] leading-[1.95] tracking-[0.015em] max-w-xl ${
             centered ? "mx-auto" : ""
           } ${light ? "text-beige/35" : "text-warm-gray/75"}`}
         >
