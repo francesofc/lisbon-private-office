@@ -65,7 +65,7 @@ export default function ServiceCard({
           <li
             key={i}
             className={`text-[13px] leading-[2] tracking-[0.015em] flex items-start gap-4 transition-colors duration-400 ${
-              highlighted ? "text-beige/45" : "text-warm-gray/70 group-hover:text-warm-gray/90"
+              highlighted ? "text-beige/55" : "text-warm-gray/80 group-hover:text-warm-gray/95"
             }`}
           >
             <span

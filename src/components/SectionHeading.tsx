@@ -35,7 +35,7 @@ export default function SectionHeading({
         <p
           className={`mt-8 text-[14px] leading-[2] tracking-[0.02em] max-w-xl ${
             centered ? "mx-auto" : ""
-          } ${light ? "text-beige/35" : "text-warm-gray/70"}`}
+          } ${light ? "text-beige/45" : "text-warm-gray/80"}`}
         >
           {subtitle}
         </p>

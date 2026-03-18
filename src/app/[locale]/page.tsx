@@ -21,34 +21,34 @@ export default async function HomePage({
         <img
           src="/assets/hero-bg.jpg"
           alt="Refined private residence with ocean view at golden hour"
-          className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-[center_65%] scale-105"
           style={{ animation: "heroZoom 20s ease-out forwards" }}
         />
-        <div className="absolute inset-0 bg-black-deep/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black-deep/90 via-black-deep/55 to-black-deep/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black-deep/70 via-black-deep/20 to-black-deep/35 md:from-black-deep/55 md:via-transparent" />
+        <div className="absolute inset-0 bg-black-deep/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black-deep/90 via-black-deep/60 to-black-deep/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black-deep/70 via-black-deep/15 to-black-deep/30 md:from-black-deep/50 md:via-transparent" />
         {/* Subtle gold vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,rgba(198,168,107,0.06),transparent_70%)]" />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-7 md:px-8 lg:px-20 w-full pb-24 pt-24 md:pt-64 md:pb-44 lg:pt-[20rem] lg:pb-60">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-7 md:px-8 lg:px-20 w-full pb-20 pt-24 md:pt-52 md:pb-36 lg:pt-[16rem] lg:pb-48">
           <div className="max-w-2xl">
             <FadeIn delay={100}>
-              <p className="text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-gold/40 mb-7 md:mb-16 lg:mb-20">
+              <p className="text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-gold/55 mb-7 md:mb-12 lg:mb-16">
                 {dict.hero.locations}
               </p>
             </FadeIn>
             <FadeIn delay={250}>
-              <h1 className="font-serif text-[32px] md:text-[58px] lg:text-[72px] text-white leading-[1.06] font-light tracking-[-0.025em] mb-6 md:mb-14 lg:mb-16 drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)]">
+              <h1 className="font-serif text-[32px] md:text-[58px] lg:text-[72px] text-white leading-[1.06] font-light tracking-[-0.025em] mb-6 md:mb-10 lg:mb-12 drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)]">
                 {dict.hero.title1}<br />{dict.hero.title2}
               </h1>
             </FadeIn>
             <FadeIn delay={400}>
-              <p className="text-[13px] md:text-[15px] lg:text-[16px] leading-[1.8] text-white/45 tracking-[0.02em] max-w-sm md:max-w-md mb-6 md:mb-12 lg:mb-14">
+              <p className="text-[14px] md:text-[16px] lg:text-[17px] leading-[1.8] text-white/60 tracking-[0.02em] max-w-sm md:max-w-md mb-6 md:mb-10 lg:mb-12">
                 {dict.hero.subtitle}
               </p>
             </FadeIn>
             <FadeIn delay={500}>
-              <p className="hidden md:block text-[13px] leading-[1.7] text-[#C6A66B]/50 font-serif italic tracking-[0.01em] max-w-md mb-20 lg:mb-24">
+              <p className="hidden md:block text-[13px] leading-[1.7] text-[#C6A66B]/60 font-serif italic tracking-[0.01em] max-w-md mb-14 lg:mb-18">
                 {dict.hero.tagline}
               </p>
             </FadeIn>
@@ -64,7 +64,7 @@ export default async function HomePage({
             </FadeIn>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-offwhite via-offwhite/60 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-offwhite via-offwhite/70 to-transparent" />
 
         {/* CSS animation for hero zoom */}
         <style dangerouslySetInnerHTML={{ __html: `
@@ -76,18 +76,18 @@ export default async function HomePage({
       </section>
 
       {/* ============ WHY CLIENTS TRUST US ============ */}
-      <section className="py-28 md:py-48 lg:py-68 bg-offwhite bg-noise depth-layer relative">
+      <section className="py-16 md:py-28 lg:py-40 bg-offwhite bg-noise depth-layer relative">
         <div className="max-w-[1100px] mx-auto px-7 md:px-8 lg:px-16 relative z-10">
           <FadeIn>
             <SectionHeading label={dict.whyUs.label} title={dict.whyUs.title} subtitle={dict.whyUs.subtitle} />
           </FadeIn>
-          <div className="mt-20 md:mt-36 lg:mt-48 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 lg:gap-10">
+          <div className="mt-16 md:mt-28 lg:mt-36 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 lg:gap-10">
             {dict.whyUs.items.map((item, i) => (
               <FadeIn key={item.title} delay={i * 120}>
                 <div className="text-center group p-8 md:p-10 lg:p-14 card-lift bg-white/0 hover:bg-white/80 rounded-sm">
                   <div className="w-5 h-px bg-gold/25 mx-auto mb-8 md:mb-12 group-hover:w-14 group-hover:bg-gold/50 transition-all duration-500 ease-out" />
                   <h3 className="font-serif text-[24px] md:text-[26px] lg:text-[30px] font-light mb-6 md:mb-8 text-black-deep tracking-[-0.015em]">{item.title}</h3>
-                  <p className="text-[14px] md:text-[13px] leading-[2.1] tracking-[0.015em] text-warm-gray/65 max-w-[280px] md:max-w-[230px] mx-auto group-hover:text-warm-gray/85 transition-colors duration-400">{item.description}</p>
+                  <p className="text-[14px] md:text-[13px] leading-[2.1] tracking-[0.015em] text-warm-gray/75 max-w-[280px] md:max-w-[230px] mx-auto group-hover:text-warm-gray/90 transition-colors duration-400">{item.description}</p>
                 </div>
               </FadeIn>
             ))}
@@ -99,7 +99,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ WHO THIS IS FOR ============ */}
-      <section className="py-24 md:py-44 lg:py-64 bg-beige bg-noise relative">
+      <section className="py-14 md:py-24 lg:py-36 bg-beige bg-noise relative">
         <div className="max-w-[1400px] mx-auto px-7 md:px-8 lg:px-16 relative z-10">
           <FadeIn>
             <div className="lg:grid lg:grid-cols-12 lg:gap-16 lg:items-end">
@@ -109,12 +109,12 @@ export default async function HomePage({
             </div>
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="mt-16 md:mt-24 lg:mt-32 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
+            <div className="mt-14 md:mt-20 lg:mt-28 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
               {dict.whoIsFor.profiles.map((profile) => (
                 <div key={profile.title} className="bg-white/40 backdrop-blur-sm p-10 md:p-14 lg:p-20 group border border-beige-dark/10 card-inner-glow">
                   <div className="w-5 h-px bg-gold/30 mb-8 md:mb-10 group-hover:w-12 group-hover:bg-gold/55 transition-all duration-500 ease-out" />
                   <h3 className="font-serif text-[22px] lg:text-[26px] font-light text-black-deep tracking-[-0.015em] mb-5 md:mb-7">{profile.title}</h3>
-                  <p className="text-[14px] md:text-[13px] leading-[2.1] tracking-[0.015em] text-warm-gray/70 group-hover:text-warm-gray/90 transition-colors duration-400">{profile.description}</p>
+                  <p className="text-[14px] md:text-[13px] leading-[2.1] tracking-[0.015em] text-warm-gray/80 group-hover:text-warm-gray/95 transition-colors duration-400">{profile.description}</p>
                 </div>
               ))}
             </div>
@@ -126,13 +126,13 @@ export default async function HomePage({
       </section>
 
       {/* ============ PORTUGAL SETUP SERVICE ============ */}
-      <section className="py-28 md:py-48 lg:py-68 bg-offwhite depth-layer relative">
+      <section className="py-16 md:py-28 lg:py-40 bg-offwhite depth-layer relative">
         <div className="max-w-[1400px] mx-auto px-7 md:px-8 lg:px-16 relative z-10">
           <FadeIn>
             <SectionHeading label={dict.setup.label} title={dict.setup.title} subtitle={dict.setup.subtitle} />
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="mt-20 md:mt-32 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6 lg:items-start">
+            <div className="mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6 lg:items-start">
               <ServiceCard title={dict.setup.basic.title} price={dict.setup.basic.price} features={[...dict.setup.basic.features]} />
               <ServiceCard title={dict.setup.premium.title} price={dict.setup.premium.price} highlighted badge={dict.setup.recommended} features={[...dict.setup.premium.features]} />
               <ServiceCard title={dict.setup.private.title} price={dict.setup.private.price} features={[...dict.setup.private.features]} />
@@ -145,7 +145,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ WHAT HAPPENS AFTER ============ */}
-      <section className="py-24 md:py-44 lg:py-64 bg-beige bg-noise relative">
+      <section className="py-14 md:py-24 lg:py-36 bg-beige bg-noise relative">
         <div className="max-w-[1200px] mx-auto px-7 md:px-8 lg:px-16 relative z-10">
           <div className="lg:grid lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-4 lg:pt-2">
@@ -168,7 +168,7 @@ export default async function HomePage({
                       </div>
                       <div className="pb-14 md:pb-18 lg:pb-24">
                         <h3 className="font-serif text-[20px] md:text-[22px] lg:text-[26px] font-light text-black-deep tracking-[-0.015em] mb-4 md:mb-6">{step.title}</h3>
-                        <p className="text-[14px] md:text-[13px] leading-[2.1] tracking-[0.015em] text-warm-gray/75 max-w-sm">{step.description}</p>
+                        <p className="text-[14px] md:text-[13px] leading-[2.1] tracking-[0.015em] text-warm-gray/85 max-w-sm">{step.description}</p>
                       </div>
                     </div>
                   </FadeIn>
@@ -180,7 +180,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ VIP ============ */}
-      <section className="py-28 md:py-44 lg:py-64 bg-black-deep bg-noise relative overflow-hidden">
+      <section className="py-16 md:py-26 lg:py-36 bg-black-deep bg-noise relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
         {/* Ambient glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(198,168,107,0.04),transparent_70%)]" />
@@ -191,14 +191,14 @@ export default async function HomePage({
           <FadeIn delay={100}>
             <div className="mt-12 md:mt-16 max-w-xl mx-auto text-center">
               <p className="font-serif text-[30px] md:text-[36px] font-light tracking-[-0.01em] text-gold/80 mb-6 md:mb-8 drop-shadow-[0_0_20px_rgba(198,168,107,0.15)]">{dict.vip.price}</p>
-              <p className="text-[14px] leading-[2] tracking-[0.015em] text-beige/30">{dict.vip.text}</p>
+              <p className="text-[14px] leading-[2] tracking-[0.015em] text-beige/45">{dict.vip.text}</p>
             </div>
           </FadeIn>
           <FadeIn delay={200}>
             <div className="mt-16 md:mt-24 max-w-lg mx-auto">
               <div className="grid grid-cols-1 gap-5 md:gap-6">
                 {dict.vip.features.map((item) => (
-                  <div key={item} className="flex items-center gap-5 text-[13px] tracking-[0.01em] text-beige/35 py-3 border-b border-beige/5 last:border-0 hover:text-beige/55 hover:border-gold/10 transition-all duration-300">
+                  <div key={item} className="flex items-center gap-5 text-[13px] tracking-[0.01em] text-beige/50 py-3 border-b border-beige/8 last:border-0 hover:text-beige/70 hover:border-gold/15 transition-all duration-300">
                     <span className="block w-3 h-px bg-gold/30 shrink-0" />
                     {item}
                   </div>
@@ -211,7 +211,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ LIFESTYLE & ACCESS ============ */}
-      <section className="py-24 md:py-44 lg:py-58 bg-offwhite depth-layer relative">
+      <section className="py-14 md:py-24 lg:py-34 bg-offwhite depth-layer relative">
         <div className="max-w-[1100px] mx-auto px-7 md:px-8 lg:px-16 relative z-10">
           <FadeIn>
             <div className="lg:max-w-lg">
@@ -235,17 +235,13 @@ export default async function HomePage({
       </section>
 
       {/* ============ MEMBERSHIP ============ */}
-      <section className="py-24 md:py-44 lg:py-58 bg-beige bg-noise relative">
+      <section className="py-14 md:py-24 lg:py-34 bg-beige bg-noise relative">
         <div className="max-w-[1100px] mx-auto px-7 md:px-8 lg:px-16 relative z-10">
           <FadeIn>
-            <div className="lg:grid lg:grid-cols-12">
-              <div className="lg:col-span-6 lg:col-start-7 lg:text-right">
-                <SectionHeading label={dict.membership.label} title={dict.membership.title} subtitle={dict.membership.subtitle} centered={false} />
-              </div>
-            </div>
+            <SectionHeading label={dict.membership.label} title={dict.membership.title} subtitle={dict.membership.subtitle} />
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="mt-16 md:mt-24 max-w-2xl p-10 md:p-16 lg:p-28 bg-white relative shadow-[0_8px_40px_rgba(14,14,14,0.04),0_1px_8px_rgba(14,14,14,0.02)]">
+            <div className="mt-14 md:mt-20 max-w-2xl mx-auto p-10 md:p-16 lg:p-28 bg-white relative shadow-[0_8px_40px_rgba(14,14,14,0.04),0_1px_8px_rgba(14,14,14,0.02)]">
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/25 to-transparent" />
               <div className="mb-12 md:mb-18">
                 <h3 className="font-serif text-[22px] lg:text-[26px] font-light text-black-deep tracking-[-0.015em] mb-4 md:mb-5">{dict.membership.packageTitle}</h3>
@@ -271,7 +267,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ OUR NETWORK ============ */}
-      <section className="py-24 md:py-44 lg:py-58 bg-offwhite relative">
+      <section className="py-14 md:py-24 lg:py-34 bg-offwhite relative">
         <div className="max-w-[1400px] mx-auto px-7 md:px-8 lg:px-16">
           <FadeIn>
             <div className="lg:max-w-md">
@@ -291,7 +287,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ PRIVATE GATHERINGS ============ */}
-      <section className="py-24 md:py-44 lg:py-58 bg-black-deep bg-noise relative overflow-hidden">
+      <section className="py-14 md:py-24 lg:py-34 bg-black-deep bg-noise relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
         {/* Ambient glow */}
@@ -303,7 +299,7 @@ export default async function HomePage({
           <FadeIn delay={100}>
             <div className="mt-14 md:mt-20 flex flex-wrap justify-center gap-3 md:gap-4">
               {dict.events.types.map((event) => (
-                <div key={event} className="px-6 md:px-8 py-3.5 md:py-4 border border-beige/8 text-[12px] tracking-[0.05em] text-beige/35 hover:border-gold/30 hover:text-gold/70 hover:shadow-[0_0_16px_rgba(198,168,107,0.08)] transition-all duration-400 ease-out">
+                <div key={event} className="px-6 md:px-8 py-3.5 md:py-4 border border-beige/12 text-[12px] tracking-[0.05em] text-beige/50 hover:border-gold/30 hover:text-gold/70 hover:shadow-[0_0_16px_rgba(198,168,107,0.08)] transition-all duration-400 ease-out">
                   {event}
                 </div>
               ))}
@@ -313,7 +309,7 @@ export default async function HomePage({
       </section>
 
       {/* ============ FINAL CTA ============ */}
-      <section className="py-32 md:py-52 lg:py-72 bg-beige bg-noise depth-layer relative pb-44 md:pb-52 lg:pb-72">
+      <section className="py-18 md:py-32 lg:py-42 bg-beige bg-noise depth-layer relative pb-24 md:pb-36 lg:pb-42">
         <div className="max-w-[700px] mx-auto px-7 md:px-8 lg:px-16 text-center relative z-10">
           <FadeIn>
             <div className="w-10 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent mx-auto mb-10 md:mb-14" />
@@ -322,7 +318,7 @@ export default async function HomePage({
             <h2 className="font-serif text-[28px] md:text-[40px] lg:text-[48px] font-light text-black-deep leading-[1.15] tracking-[-0.015em] mb-8 md:mb-12">
               {dict.cta.titleLine1}<br />{dict.cta.titleLine2}
             </h2>
-            <p className="text-[14px] leading-[2] tracking-[0.015em] text-warm-gray/75 mb-14 md:mb-20 max-w-md mx-auto">{dict.cta.text}</p>
+            <p className="text-[14px] leading-[2] tracking-[0.015em] text-warm-gray/85 mb-12 md:mb-16 max-w-md mx-auto">{dict.cta.text}</p>
           </FadeIn>
           <FadeIn delay={150}>
             <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-5">
