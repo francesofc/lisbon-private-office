@@ -29,6 +29,7 @@ export default function Header({ locale, dict }: HeaderProps) {
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
 
+  // Build locale-switched path
   function getLocalePath(targetLocale: string) {
     const segments = pathname.split("/");
     segments[1] = targetLocale;
@@ -37,17 +38,17 @@ export default function Header({ locale, dict }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-offwhite/95 backdrop-blur-xl border-b border-beige-dark/15 shadow-[0_1px_20px_rgba(0,0,0,0.03)]"
+          ? "bg-offwhite/95 backdrop-blur-lg border-b border-beige-dark/20"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-24 flex items-center justify-between h-[72px] md:h-[82px] lg:h-[96px]">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 flex items-center justify-between h-[72px] md:h-[80px] lg:h-[92px]">
         {/* Logo */}
         <Link href={`/${locale}`}>
           <span
-            className={`font-serif text-[11px] md:text-[18px] lg:text-[19px] tracking-[0.15em] md:tracking-[0.22em] uppercase transition-colors duration-700 whitespace-nowrap ${
+            className={`font-serif text-[11px] md:text-[18px] lg:text-[19px] tracking-[0.15em] md:tracking-[0.22em] uppercase transition-colors duration-500 whitespace-nowrap ${
               scrolled ? "text-[#0E0E0E]" : "text-white"
             }`}
           >
@@ -56,14 +57,14 @@ export default function Header({ locale, dict }: HeaderProps) {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10 lg:gap-12">
-          <nav className="flex items-center gap-10 lg:gap-12">
+        <div className="hidden md:flex items-center gap-10">
+          <nav className="flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[11px] lg:text-[12px] tracking-[0.1em] transition-all duration-500 ease-out hover:text-gold ${
-                  scrolled ? "text-black-deep/35" : "text-white/40"
+                className={`text-[12px] tracking-[0.08em] transition-colors duration-400 ease-out hover:text-gold ${
+                  scrolled ? "text-black-deep/40" : "text-white/50"
                 }`}
               >
                 {link.label}
@@ -72,25 +73,27 @@ export default function Header({ locale, dict }: HeaderProps) {
           </nav>
 
           {/* Language Switcher */}
-          <div className="flex items-center gap-1.5 ml-4">
+          <div className="flex items-center gap-1 ml-4">
             {locales.map((l, i) => (
               <span key={l} className="flex items-center">
                 <Link
                   href={getLocalePath(l)}
-                  className={`text-[10px] tracking-[0.12em] transition-colors duration-500 px-1.5 py-0.5 ${
+                  className={`text-[11px] tracking-[0.1em] transition-colors duration-300 px-1.5 py-0.5 ${
                     l === locale
-                      ? "text-gold/70"
+                      ? scrolled
+                        ? "text-gold"
+                        : "text-gold"
                       : scrolled
-                        ? "text-black-deep/20 hover:text-black-deep/45"
-                        : "text-white/20 hover:text-white/45"
+                        ? "text-black-deep/25 hover:text-black-deep/50"
+                        : "text-white/25 hover:text-white/50"
                   }`}
                 >
                   {l.toUpperCase()}
                 </Link>
                 {i < locales.length - 1 && (
                   <span
-                    className={`text-[10px] ${
-                      scrolled ? "text-black-deep/8" : "text-white/10"
+                    className={`text-[11px] ${
+                      scrolled ? "text-black-deep/10" : "text-white/15"
                     }`}
                   >
                     |
@@ -102,10 +105,10 @@ export default function Header({ locale, dict }: HeaderProps) {
 
           <Link
             href={`/${locale}/contact`}
-            className={`ml-4 px-8 py-3 text-[11px] tracking-[0.18em] uppercase transition-all duration-500 ease-out ${
+            className={`ml-4 px-7 py-2.5 text-[12px] tracking-[0.15em] uppercase transition-all duration-400 ease-out ${
               scrolled
-                ? "border border-[#0E0E0E]/15 text-[#0E0E0E]/60 hover:border-gold/50 hover:text-gold"
-                : "border border-white/15 text-white/55 hover:border-gold/50 hover:text-gold"
+                ? "border border-[#0E0E0E]/20 text-[#0E0E0E]/70 hover:border-gold hover:text-gold"
+                : "border border-white/25 text-white/70 hover:border-gold hover:text-gold"
             }`}
           >
             {dict.nav.contactUs}
@@ -114,17 +117,18 @@ export default function Header({ locale, dict }: HeaderProps) {
 
         {/* Mobile: Language + Toggle */}
         <div className="md:hidden flex items-center gap-4">
+          {/* Mobile Language Switcher */}
           <div className="flex items-center gap-0.5">
             {locales.map((l, i) => (
               <span key={l} className="flex items-center">
                 <Link
                   href={getLocalePath(l)}
-                  className={`text-[10px] tracking-[0.1em] transition-colors duration-400 px-1 ${
+                  className={`text-[10px] tracking-[0.1em] transition-colors duration-300 px-1 ${
                     l === locale
-                      ? "text-gold/70"
+                      ? "text-gold"
                       : scrolled
-                        ? "text-black-deep/20"
-                        : "text-white/20"
+                        ? "text-black-deep/25"
+                        : "text-white/25"
                   }`}
                 >
                   {l.toUpperCase()}
@@ -132,7 +136,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                 {i < locales.length - 1 && (
                   <span
                     className={`text-[10px] ${
-                      scrolled ? "text-black-deep/8" : "text-white/10"
+                      scrolled ? "text-black-deep/10" : "text-white/15"
                     }`}
                   >
                     |
@@ -148,17 +152,17 @@ export default function Header({ locale, dict }: HeaderProps) {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-5 h-px transition-all duration-400 ${
+              className={`block w-5 h-px transition-all duration-300 ${
                 scrolled ? "bg-[#0E0E0E]" : "bg-white"
               } ${mobileOpen ? "rotate-45 translate-y-[3px]" : ""}`}
             />
             <span
-              className={`block w-5 h-px transition-all duration-400 ${
+              className={`block w-5 h-px transition-all duration-300 ${
                 scrolled ? "bg-[#0E0E0E]" : "bg-white"
               } ${mobileOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`block w-5 h-px transition-all duration-400 ${
+              className={`block w-5 h-px transition-all duration-300 ${
                 scrolled ? "bg-[#0E0E0E]" : "bg-white"
               } ${mobileOpen ? "-rotate-45 -translate-y-[3px]" : ""}`}
             />
@@ -168,26 +172,26 @@ export default function Header({ locale, dict }: HeaderProps) {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-600 ease-out ${
-          mobileOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden overflow-hidden transition-all duration-500 ${
+          mobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="flex flex-col px-8 py-12 gap-8 bg-offwhite/98 backdrop-blur-xl border-t border-beige-dark/10">
+        <nav className="flex flex-col px-8 py-10 gap-7 bg-offwhite/98 backdrop-blur-lg border-t border-beige-dark/15">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-[15px] tracking-[0.04em] text-black-deep/50 hover:text-gold transition-colors duration-500 py-1"
+              className="text-[14px] tracking-[0.06em] text-black-deep/55 hover:text-gold transition-colors duration-400 py-1"
             >
               {link.label}
             </Link>
           ))}
-          <div className="mt-5 pt-8 border-t border-beige-dark/10">
+          <div className="mt-4 pt-7 border-t border-beige-dark/15">
             <Link
               href={`/${locale}/contact`}
               onClick={() => setMobileOpen(false)}
-              className="block w-full py-4.5 bg-[#C6A66B] text-[#0E0E0E] text-[10px] tracking-[0.25em] uppercase font-semibold text-center transition-colors duration-500"
+              className="block w-full py-4 bg-[#C6A66B] text-[#0E0E0E] text-[11px] tracking-[0.2em] uppercase font-semibold text-center transition-colors duration-400"
             >
               {dict.nav.contactUs}
             </Link>
