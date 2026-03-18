@@ -64,7 +64,7 @@ export default async function HomePage({
             </FadeIn>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-offwhite via-offwhite/70 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-offwhite via-offwhite/40 to-transparent" />
 
         {/* CSS animation for hero zoom */}
         <style dangerouslySetInnerHTML={{ __html: `
