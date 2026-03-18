@@ -57,7 +57,7 @@ export default async function HomePage({
                 <Link href={`/${locale}/contact`} className="btn-gold px-12 md:px-16 py-4 md:py-[19px] bg-[#C6A66B] text-[#0E0E0E] text-[11px] tracking-[0.22em] uppercase font-semibold hover:bg-white hover:text-[#0E0E0E] transition-all duration-400 text-center shadow-[0_4px_24px_rgba(198,168,107,0.25)]">
                   {dict.hero.cta1}
                 </Link>
-                <Link href={`/${locale}/services`} className="px-10 md:px-14 py-4 md:py-[19px] border border-white/12 text-white/35 text-[11px] tracking-[0.2em] uppercase hover:border-white/30 hover:text-white/65 hover:shadow-[0_0_20px_rgba(255,255,255,0.03)] transition-all duration-400 text-center backdrop-blur-[2px]">
+                <Link href={`/${locale}/services`} className="px-10 md:px-14 py-4 md:py-[19px] border border-white/25 text-white/55 text-[11px] tracking-[0.2em] uppercase hover:border-white/45 hover:text-white/80 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-400 text-center backdrop-blur-[2px]">
                   {dict.hero.cta2}
                 </Link>
               </div>
