@@ -17,23 +17,23 @@ export default function ServiceCard({
     <div
       className={`group relative p-14 lg:p-18 transition-all duration-500 ease-out ${
         highlighted
-          ? "bg-black-deep text-beige lg:scale-[1.02] lg:-my-4 lg:z-10 lg:shadow-2xl"
-          : "bg-white hover:bg-white border border-transparent hover:border-beige-dark/20"
+          ? "bg-black-deep text-beige lg:scale-[1.03] lg:-my-6 lg:z-10 shadow-[0_24px_64px_rgba(14,14,14,0.25),0_8px_24px_rgba(14,14,14,0.15)]"
+          : "bg-white card-inner-glow"
       }`}
     >
-      {/* Top accent */}
+      {/* Top accent line */}
       <div
-        className={`absolute top-0 left-10 right-10 h-px transition-all duration-500 ${
+        className={`absolute top-0 left-0 right-0 h-[2px] transition-all duration-500 ${
           highlighted
-            ? "bg-gold/40"
-            : "bg-beige-dark/30 group-hover:bg-gold/40 group-hover:left-8 group-hover:right-8"
+            ? "bg-gradient-to-r from-transparent via-gold/60 to-transparent"
+            : "bg-gradient-to-r from-transparent via-beige-dark/30 to-transparent group-hover:via-gold/40"
         }`}
       />
 
       {/* Badge */}
       {badge && (
         <div className="mb-7">
-          <span className="inline-block px-4 py-1.5 text-[10px] tracking-[0.18em] uppercase bg-gold/15 text-gold border border-gold/20">
+          <span className="inline-block px-4 py-1.5 text-[10px] tracking-[0.18em] uppercase bg-gold/15 text-gold border border-gold/20 shadow-[0_0_12px_rgba(198,168,107,0.1)]">
             {badge}
           </span>
         </div>
@@ -56,7 +56,7 @@ export default function ServiceCard({
 
       <div
         className={`h-px mb-10 transition-all duration-500 ${
-          highlighted ? "w-8 bg-beige/15" : "w-8 bg-beige-dark/30 group-hover:w-12 group-hover:bg-gold/25"
+          highlighted ? "w-10 bg-gradient-to-r from-gold/30 to-transparent" : "w-8 bg-beige-dark/30 group-hover:w-14 group-hover:bg-gradient-to-r group-hover:from-gold/40 group-hover:to-transparent"
         }`}
       />
 
@@ -77,6 +77,11 @@ export default function ServiceCard({
           </li>
         ))}
       </ul>
+
+      {/* Subtle bottom reflection for highlighted */}
+      {highlighted && (
+        <div className="absolute -bottom-3 left-[10%] right-[10%] h-3 bg-gradient-to-b from-black-deep/10 to-transparent blur-sm" />
+      )}
     </div>
   );
 }
